@@ -49,6 +49,9 @@ import org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator.Choice;
 import org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.custom.VariableSwapperFieldMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.custom.VariableSwapperLocalMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.custom.VariableSwapperStaticMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.experimental.BigIntegerMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.experimental.RemoveIncrementsMutator;
@@ -221,6 +224,13 @@ public final class Mutator {
      * Experimental mutator that swaps big integer methods
      */
     add("EXPERIMENTAL_BIG_INTEGER", BigIntegerMutator.INSTANCE);
+
+    /*
+     * Experimental mutator that replaces variables with others of matching type
+     */
+    add("VARIABLE_SWAPPER_FIELD_MUTATOR", VariableSwapperFieldMutator.VARIABLE_SWAPPER_FIELD_MUTATOR);
+    add("VARIABLE_SWAPPER_STATIC_MUTATOR", VariableSwapperStaticMutator.VARIABLE_SWAPPER_STATIC_MUTATOR);
+    add("VARIABLE_SWAPPER_LOCAL_MUTATOR", VariableSwapperLocalMutator.VARIABLE_SWAPPER_LOCAL_MUTATOR);
   }
 
   /**

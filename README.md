@@ -2,6 +2,10 @@
 [![Build Status](https://travis-ci.org/hcoles/pitest.png?branch=master)](https://travis-ci.org/hcoles/pitest)
 [![Build Status](https://dev.azure.com/henrycoles/pitest/_apis/build/status/hcoles.pitest?branchName=master)](https://dev.azure.com/henrycoles/pitest/_build/latest?definitionId=3&branchName=master)
 
+# This branch contains a custom mutator
+Files are located in package org.pitest.mutationtest.engine.gregor.mutators.custom
+The mutator swaps variables with other variables of the same type
+
 Pitest (aka PIT) is a state of the art mutation testing system for Java and the JVM.
 
 Read all about it at http://pitest.org
